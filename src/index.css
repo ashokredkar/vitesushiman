@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body, #root{
+    overflow-x: hidden;
+}
+
+@layer components {
+    .btn {
+        @apply cursor-pointer py-3 px-8 lg:py-4 lg:px-12 flex items-center gap-x-2 lg:gap-x-5 rounded-full text-sm lg:text-base hover:scale-105 transition-all
+    }
+    .input {
+        @apply sm:flex-1 max-sm:w-full text-base leading-normal p-0 xs:p-2 sm:p-5 outline-none border-none max-sm:rounded-full;
+    }
+    .sub-heading {
+        @apply text-base text-primary mb-5
+    }
+    .section-heading {
+        @apply text-secondary text-4xl md:text-5xl font-bold xl:text-6xl font-playfair xl:font-semibold leading-tight sm:leading-normal
+    }
+    .section-text {
+        @apply my-5 text-secondary text-base font-normal leading-relaxed
+    }
+    .logo {
+        @apply font-playfair p-5 text-white font-semibold text-lg uppercase
+    }
+}
